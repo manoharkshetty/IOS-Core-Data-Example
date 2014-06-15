@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QmZ-Pt-Q0f">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Device Table View Controller - Devices-->
+        <scene sceneID="sJa-ap-vk7">
+            <objects>
+                <tableViewController id="apM-iI-VlR" customClass="DeviceTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NWw-d0-r32">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Mzr-Op-VVo" detailTextLabel="3cC-OK-y7K" style="IBUITableViewCellStyleValue1" id="kr1-F7-xEK">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-Op-VVo">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cC-OK-y7K">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Devices" id="vmY-Kb-wpG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qIX-j5-ajT">
+                            <color key="tintColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="RzG-l9-hId" kind="push" id="qHQ-c1-s3k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YeK-dI-ddg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="-22"/>
+        </scene>
+        <!--Device View Controller - Device-->
+        <scene sceneID="gAl-1v-DoT">
+            <objects>
+                <viewController id="RzG-l9-hId" customClass="DeviceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GBn-wB-DJu">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dB-bO-Jus">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Version" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9QR-Xm-c0f">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Device Company" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YGR-Z6-7j8">
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YGR-Z6-7j8" firstAttribute="top" secondItem="GBn-wB-DJu" secondAttribute="top" constant="192" id="Hk0-qJ-h3p"/>
+                            <constraint firstAttribute="trailing" secondItem="2dB-bO-Jus" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IK2-Nd-U5Q"/>
+                            <constraint firstItem="YGR-Z6-7j8" firstAttribute="leading" secondItem="GBn-wB-DJu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IS6-Ib-1Qm"/>
+                            <constraint firstAttribute="trailing" secondItem="9QR-Xm-c0f" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="L03-PU-h7T"/>
+                            <constraint firstItem="9QR-Xm-c0f" firstAttribute="top" secondItem="GBn-wB-DJu" secondAttribute="top" constant="134" id="Lbp-yg-xYO"/>
+                            <constraint firstItem="2dB-bO-Jus" firstAttribute="leading" secondItem="GBn-wB-DJu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qsc-0H-XcZ"/>
+                            <constraint firstItem="9QR-Xm-c0f" firstAttribute="leading" secondItem="GBn-wB-DJu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YkO-T2-Poi"/>
+                            <constraint firstItem="2dB-bO-Jus" firstAttribute="top" secondItem="GBn-wB-DJu" secondAttribute="top" constant="76" id="gaC-Fx-6Er"/>
+                            <constraint firstAttribute="trailing" secondItem="YGR-Z6-7j8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zkO-7y-6AZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Device" id="wVH-6e-mPg">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="go3-EL-eFV">
+                            <connections>
+                                <action selector="cancel:" destination="RzG-l9-hId" id="OTr-66-i3R"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="2Tc-WV-HD9">
+                            <connections>
+                                <action selector="save:" destination="RzG-l9-hId" id="dbV-Bq-Uti"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deviceCompany" destination="YGR-Z6-7j8" id="AFG-Yl-aRF"/>
+                        <outlet property="deviceName" destination="2dB-bO-Jus" id="SV0-l1-NYJ"/>
+                        <outlet property="deviceVersion" destination="9QR-Xm-c0f" id="LHu-ZC-Nhr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ii7-6l-O8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005" y="-15"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uee-v9-157">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="QmZ-Pt-Q0f" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7z6-Nf-elv">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="apM-iI-VlR" kind="relationship" relationship="rootViewController" id="qLT-Ku-wPm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mfh-oc-TOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="-22"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="DeviceTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DeviceTableViewController.h"/>
+        </class>
+        <class className="DeviceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DeviceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="deviceCompany" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="deviceName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="deviceVersion" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
